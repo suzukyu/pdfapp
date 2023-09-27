@@ -1,0 +1,107 @@
+Windwos + VSCodeでFlutterアプリを作る
+
+Windows install | Flutter
+https://docs.flutter.dev/get-started/install/windows
+
+1. VS Code 環境のセットアップ
+
+Visual Studio Code | Flutter
+https://docs.flutter.dev/tools/vs-code
+
+2. VS Code Flutterプラグインの追加
+プラグインから"Flutter"をインストールする。
+バッジの付いている dartcode.org のものをインストールした
+
+3. Flutter(SDK)のインストール
+
+Windows install | Flutter
+https://docs.flutter.dev/get-started/install/windows
+
+今回はgitリポジトリを取得
+https://github.com/flutter/flutter.git
+stableブランチをチェックアウトした
+
+4. Flutterにパスを通す
+検索バーを開いて「env」と入力して「システム環境変数を編集」を開きます。
+「環境変数」を開きます。
+ユーザー環境変数の中の「Path」を選択して「編集」をクリックします。
+bin フォルダの絶対パスを入力して「OK」を押します。
+
+5. Flutter環境の診断とアップデート
+ターミナルを開いて診断機能を実行
+> flutter doctor
+
+(参考)私の環境ではこんな感じ。[!]と[X]が利用できないものを示す。
+Windows Appを作るにはVisual Studio、Android Appを作るにはAndroid Studioが必要。
+> flutter doctor
+Doctor summary (to see all details, run flutter doctor -v):
+[√] Flutter (Channel stable, 3.13.5, on Microsoft Windows [Version 10.0.19045.3448], locale ja-JP)
+[√] Windows Version (Installed version of Windows is version 10 or higher)
+[X] Android toolchain - develop for Android devices
+    X cmdline-tools component is missing
+      Run `path/to/sdkmanager --install "cmdline-tools;latest"`
+      See https://developer.android.com/studio/command-line for more details.
+[√] Chrome - develop for the web
+[X] Visual Studio - develop Windows apps
+    X Visual Studio not installed; this is necessary to develop Windows apps.
+      Download at https://visualstudio.microsoft.com/downloads/.
+      Please install the "Desktop development with C++" workload, including all of its default components
+[!] Android Studio (not installed)
+[√] VS Code (version 1.82.2)
+[√] Connected device (3 available)
+[√] Network resources
+
+! Doctor found issues in 3 categories.
+
+6. Android Studioのセットアップ
+今回はAndroidアプリを作りたいのでAndroid Studioをインストールする
+
+Download Android Studio & App Tools - Android Developers
+https://developer.android.com/studio
+
+7. Android Studioのパスを指定
+> flutter config --android-studio-dir=<directory>Android Studio がインストールされているディレクトリ
+
+8. Android Studio から Command-line tool をインストールする
+
+・More Actions から SDK manager を起動
+・SDK Tools から Android SDK Command-line tool を選択
+・Applyボタンを押す
+
+9. Androidライセンスの承認
+> flutter doctor --android-licenses
+途中で表示される利用許諾にyを入力して承認する
+
+10. Flutter環境の診断
+ターミナルを開いて診断機能を実行
+
+Window App使用する場合は、Visual Studioのセットアップも実施する。
+> flutter doctor
+Doctor summary (to see all details, run flutter doctor -v):
+[√] Flutter (Channel stable, 3.13.5, on Microsoft Windows [Version 10.0.19045.3448], locale ja-JP)
+[√] Windows Version (Installed version of Windows is version 10 or higher)
+[√] Android toolchain - develop for Android devices (Android SDK version 29.0.0)
+[√] Chrome - develop for the web
+[X] Visual Studio - develop Windows apps
+    X Visual Studio not installed; this is necessary to develop Windows apps.
+      Download at https://visualstudio.microsoft.com/downloads/.
+      Please install the "Desktop development with C++" workload, including all of its default components
+[√] Android Studio (version 2022.3)
+[√] VS Code (version 1.82.2)
+[√] Connected device (3 available)
+[√] Network resources
+
+! Doctor found issues in 1 category.
+
+11. Android Studio で 仮想デバイスを作成
+
+・More Actions から Virtual Device Manager を起動
+・Createから適当なモデルを選択して作成する
+
+ex-1．Flutterプロジェクトの作成
+
+・コマンドパレット(Cmd + Shift + P)を開く
+・「Flutter: New Project.」を選択
+・ Application を選択
+・ アプリ作成フォルダを選択
+・ プロジェクト名を入力
