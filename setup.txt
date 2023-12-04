@@ -105,3 +105,35 @@ ex-1．Flutterプロジェクトの作成
 ・ Application を選択
 ・ アプリ作成フォルダを選択
 ・ プロジェクト名を入力
+
+ex-2. flutter_pdfviewをimport
+
+そのままpackages getをすると以下の通り
+> flutter packages get
+Resolving dependencies...
+  collection 1.17.2 (1.18.0 available)
+  cupertino_icons 1.0.5 (1.0.6 available)
+  flutter_lints 2.0.2 (3.0.0 available)
+  lints 2.0.1 (3.0.0 available)
+  material_color_utilities 0.5.0 (0.8.0 available)
+  meta 1.9.1 (1.11.0 available)
+  stack_trace 1.11.0 (1.11.1 available)
+  stream_channel 2.1.1 (2.1.2 available)
+  test_api 0.6.0 (0.6.1 available)
+  web 0.1.4-beta (0.3.0 available)
+Got dependencies!
+> flutter pub add flutter_pdfview
+Resolving dependencies... 
+  collection 1.17.2 (1.18.0 available)
+  cupertino_icons 1.0.5 (1.0.6 available)
+  flutter_lints 2.0.2 (3.0.0 available)
++ flutter_pdfview 1.3.2
+  lints 2.0.1 (3.0.0 available)
+  material_color_utilities 0.5.0 (0.8.0 available)
+  meta 1.9.1 (1.11.0 available)
+  stack_trace 1.11.0 (1.11.1 available)
+  stream_channel 2.1.1 (2.1.2 available)
+  test_api 0.6.0 (0.6.1 available)
+  web 0.1.4-beta (0.3.0 available)
+Changed 1 dependency!
+> 
